@@ -1,7 +1,9 @@
 image:
   file: Dockerfile
 tasks:
-  - init: pip install pylint cardboardlint
+  - init: >
+      pip install pylint cardboardlint && 
+      pip3 install -r requirements.txt
     command: >
       cardboardlinter --refspec master &&
       python3 DeepSpeech.py
