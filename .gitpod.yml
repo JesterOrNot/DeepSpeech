@@ -1,2 +1,5 @@
 image:
   file: Dockerfile
+tasks:
+  - init: pip install pylint cardboardlint && \
+      cardboardlinter --refspec master
